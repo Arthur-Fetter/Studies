@@ -1,15 +1,41 @@
 <div class="container">
     <div class="main">
-        <ul>
-            <% for(batch of batches) { %>
-                <li><%= batch.id.toString() %></li>
-            <% } %>  
-            <li>
-                One product
-            </li>
-            <li>
-                Another product
-            </li>
-        </ul>
+        <div class="selection-bar">
+            <p class="item">Filter:</p>
+            <button class="filter-button item">
+                Button
+            </button>
+            <button class="filter-button item">
+                Button
+            </button>
+            <button class="filter-button item">
+                Button
+            </button>
+            <button class="filter-button item">
+                Button
+            </button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <% for(item of Object.keys(batches[0])){ %>
+                        <th>
+                            <%= item %>
+                        </th>
+                    <% } %>
+                </tr>
+            </header>
+            <tbody>
+                <% for(batch of batches){ %>
+                <tr>
+                    <% for(value in batch){ %>
+                        <td>
+                            <%= batch[value.toString()] %>
+                        </td>
+                    <% } %>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
     </div>
 </div>

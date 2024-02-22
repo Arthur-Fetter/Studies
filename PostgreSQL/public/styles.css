@@ -1,6 +1,6 @@
 /* Navbar */
 .navigation-bar {
-    width: 100vmax; 
+    width: 100vw; 
     height:5rem;
 
     background-color: rgb(206, 29, 29);
@@ -24,7 +24,6 @@
 
     margin: 0 1rem 0 3rem;
 }
-
 .bar {
     width: 100%;
     height: 5px;
@@ -45,11 +44,65 @@
 
     margin: 0 4rem 0 1rem;
 }
-
 .profile-button img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
+}
+
+
+/* Selection bar */
+.selection-bar {
+    background-color: rgb(236, 233, 223);
+
+    max-width: 80vw;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 2rem;
+
+    padding: 1rem 4rem;
+    margin: 3rem 10vw;
+}
+.selection-bar .item {
+    margin: 0 0 0 5px
+}
+
+/* Table */
+table {
+    table-layout: auto;
+
+    background-color: gray;
+    max-width: 80vw;
+    width: 100%;
+
+    border-radius: 0.3rem;
+
+    margin: 1rem 10vw;
+}
+tr {
+    display: flex;
+    width: 100%;
+}
+tr:nth-child(even) {
+    background-color: #d4d4d4d4;
+}
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+th, td {
+    flex: 1;
+}
+th {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+td {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    text-align: left;
 }
 
 
@@ -61,4 +114,3 @@ h1 {
 body {
     margin: 0;
 }
-
